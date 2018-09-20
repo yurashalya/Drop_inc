@@ -1,0 +1,70 @@
+@import "source/variables";
+
+.image_item {
+	width: 100%;
+	height: 400px;
+	position: relative;
+	background-image: url(img/123.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation: slide 10s infinite;
+}
+
+.content_img {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	z-index: 100;
+	top: 160px;
+	opacity: 0.8;
+	& h3 {
+		font-size: 16px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $white1;
+		line-height: 25px;
+		margin-bottom: 23px;
+	}
+
+	& h1 {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		color: $white1;
+		top: 100px;
+		font-size: 72px;
+        font-weight: 500;
+        line-height: 65px;
+        text-transform: uppercase;
+	}
+}
+
+.images { 
+	position: absolute;
+	opacity: 0.8;
+	animation: slide 10s infinite;
+}
+
+
+
+
+@keyframes slide {
+ 0% {
+		background-image: url(img/123.jpg);
+	}
+
+	33% {
+		background-image: url(img/gory.jpg);
+	}
+
+	67% {
+		background-image: url(img/gory1.jpg);
+	}
+}
+
+
+
+

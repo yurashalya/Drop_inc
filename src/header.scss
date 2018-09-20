@@ -110,6 +110,10 @@ nav {
 
 	#toggle:checked + .menu_item{
 			display: block;
+			z-index: 500;
+			background: #fff;
+			margin-top: -20px;
+			border-radius: 10px;
 	 	}
 	 	
 }
