@@ -1,0 +1,148 @@
+@import "source/variables";
+
+.mains {
+	width: 55%;
+	color: $gray3;
+	margin-top: 60px;
+
+	& .main_item {
+		font-size: 16px;
+		font-weight: $regular;
+		text-transform: uppercase;
+		padding-bottom: 50px;
+		line-height: 20px;
+	}
+
+	& .main_items {
+		font-size: 14px;
+		font-weight: $regular;
+		margin-bottom: 40px;
+		line-height: 22px;
+	}
+
+	& .mains_content h3 {
+		font-size: 20px;
+		font-weight: $medium;
+		color: $black;
+		margin-bottom: 20px;
+	}
+
+	& .mains_item {
+		font-size: 14px;
+		font-weight: $regular;
+		margin-bottom: 40px;
+		line-height: 22px;
+	}
+
+	& .signature {
+		display: flex;
+		border-top: 1px solid $line;
+		padding-top: 30px;
+	}
+
+	& .signature_itm {
+		margin-left: 3%;
+		font-family: 'Libre Baskerville';
+		font-size: 16px;
+        font-style: italic;
+        line-height: 30px;
+        letter-spacing: 0.16px;
+        font-weight: $semi_bold;
+        width: 100%;
+	}
+
+	& .signatures {
+		display: flex;
+		justify-content: flex-end;
+		position:relative;
+		border-bottom: 1px solid $line;		
+	}
+
+	& .signature_men {
+		display: flex;
+		color: #797979;
+		font-weight: $regular;
+		font-size: 14px;
+		text-align: right;
+        position: relative;
+        line-height: 24px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	& .line {
+		background: #52535e;
+		height: 1px;
+		width: 40px;
+       	position: absolute;
+        top: 33px;
+        right: 130px;
+        color: #797979;
+	}
+
+	& h3 {
+		font-size: 20px;
+		font-weight: $medium;
+		color: $black;
+		padding-top: 50px;
+	}
+
+	& .history p {
+		font-size: 14px;
+		font-weight: $regular;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		line-height: 22px;
+	}
+
+	& .table {
+		width: 100%;
+		color: $table;
+     	border-collapse: collapse;
+         text-align: center;
+	}
+
+	& .table th {
+        padding: 11px 25px;
+        text-align: left;
+        font-weight: $regular;
+        line-height: 23px;
+        font-size: 12px;
+        letter-spacing: -0.11px;
+        border: 1px solid $black1;
+	}
+
+	& .table td {
+        text-align: left;
+        font-size: 14px;
+        font-weight: $semi_bold;
+        padding: 11px 25px;
+        line-height: 23px;
+        border: 1px solid $black1;
+	}
+
+	& .table tr:nth-child(even) {
+		background-color: $tables;
+	}
+
+	& .historys p {
+		font-size: 14px;
+		font-weight: $regular;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		line-height: 22px;
+		margin-top: 50px;
+		padding-bottom: 35px;
+	}
+	
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+	.mains {
+		width: 80%;
+	}
+}
+
