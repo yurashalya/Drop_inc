@@ -1,5 +1,133 @@
 @import "source/variables";
 
 .footers {
+	width: 100%;
+	height: 120px;
 	margin-top: 40px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & .footer_main {
+     	display: flex;
+     	width: 90%;
+        justify-content: space-between;
+    }
+
+    & .footer_nav {
+    	display: flex;
+    	justify-content: space-between;
+    	width: 50%;
+    }
+
+    & .footer_nav li a {
+		text-transform: uppercase;
+		font-size: 14px;
+		color: $gray6;
+		font-weight: $regular;
+    }
+
+    & .footer_icon {
+    	display: flex;
+    	justify-content: space-between;
+    	width: 18%;
+    }
+	
+	& .signature  {
+		width: 90%;
+    	text-align: right;
+    	margin-top: 2%;
+    	font-size: 14px;
+    	color: $gray2;
+      	font-weight: $regular;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+	.footer_main {
+		flex-direction: column;
+		align-items: center;
+		width: 90% !important;
+	}
+
+	.footer_nav {
+		width: 70% !important;
+	}
+
+	.footer_icon {
+		padding-top: 20px;
+		width: 40% !important;
+	}
+
+	.signature {
+		text-align: center !important;
+	}
+
+}
+
+@media only screen and (max-width: 630px) {
+
+	.footer_main {
+	 	width: 100% !important;
+	 	flex-direction: column;
+      	text-align: center;
+      	margin-top: 25%;
+	 }
+
+	.footer_nav {
+		flex-direction: column;
+      	text-align: center;
+      	line-height: 30px;
+      	padding-left: 30px;
+	}
+	
+	.footer_main .footer_icon {
+		padding-top: 30% !important;	
+	}
+
+	.signature {
+		padding-top: 40%;
+		margin-bottom: 5%;
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	.footer_main .footer_icon {
+		padding-top: 35% !important;
+	}
+
+	.signature {
+		padding-top: 50%;
+		margin-bottom: 5%;
+	}
+} 
+
+
+@media only screen and (max-width: 449px) {
+	.footer_main .footer_icon {
+		padding-top: 40% !important;
+	}
+
+	.signature {
+		padding-top: 60%;
+		margin-bottom: 5%;
+	}
+}
+
+@media only screen and (max-width: 382px) {
+	
+	.footer_nav {
+		padding-top: 10% !important;
+	}
+
+	.footer_main .footer_icon {
+		padding-top: 55% !important;
+		padding-right: 10% !important;
+	}
+
+	.signature {
+		padding-top: 85%;
+		margin-bottom: 5%;
+	}
 }
