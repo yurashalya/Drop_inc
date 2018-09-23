@@ -99,7 +99,8 @@
 		width: 100%;
 		color: $table;
      	border-collapse: collapse;
-         text-align: center;
+        text-align: center;
+
 	}
 
 	& .table th {
@@ -113,6 +114,7 @@
 	}
 
 	& .table td {
+		position: relative;
         text-align: left;
         font-size: 14px;
         font-weight: $semi_bold;
@@ -132,13 +134,44 @@
 		margin-bottom: 40px;
 		line-height: 22px;
 		margin-top: 50px;
-		padding-bottom: 35px;
+		padding-bottom: 17px;
 	}
 	
 
 }
 
+@media only screen and (max-width: 785px) {
+	.table tr, th, th {
+		display: block;
+	}
 
+	.table_head th {
+		display: none;
+	}
+
+	td {
+		display: block;
+		padding-left: 1%;
+		border: none;
+		text-align: center;
+	}
+
+	td:before {
+		content: attr(data-label);
+		position: absolute;
+		left: 51%;
+		text-transform: uppercase;
+		font-weight: $bold;
+	}
+
+	td:nth-child(odd) {
+		border: 1px solid $gray4;
+	}
+
+	.table tr {
+		border: 1px solid $gray2;
+	}
+}
 
 @media only screen and (max-width: 576px) {
 	.mains {
