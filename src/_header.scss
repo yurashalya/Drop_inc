@@ -31,12 +31,17 @@ nav {
     width: 100%;
 }
 
-.head_link {
+.head_link  {
 	text-transform: uppercase;
 	font-weight: $regular;
 	font-size: $size-default;
 	color: $gray1;
 	line-height: 23px;
+	transition: background-color 0.3s;
+}
+
+.head_link:hover {
+	color: $yellow;
 }
 
 .links {
@@ -65,6 +70,10 @@ nav {
 
 .menu_item {
 	display: none;
+}
+
+.logo, .search {
+	cursor: pointer;
 }
 
 

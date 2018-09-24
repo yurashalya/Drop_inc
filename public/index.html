@@ -6,8 +6,6 @@
 	<title>Big_Drop</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-
 	<link rel="stylesheet" href="bundle.min.css">
 </head>
 <body>
@@ -32,7 +30,7 @@
 							<a href="#" class="head_link">resources</a>
 						</li>
 						<li class="header_item">
-							<a href="#" class="head_link">contact us</a>
+							<a href="#modal" class="head_link">contact us</a>
 						</li>
 					</ul>
 				</nav>
@@ -46,7 +44,7 @@
 				      <li><a href="#">guides</a></li>
 				      <li><a href="#">community</a></li>
 				      <li><a href="#">resources</a></li>
-				      <li><a class="contact" href="#">contact us</a></li>
+				      <li><a class="contact" href="#modal">contact us</a></li>
 			  	</ul>	
 			</div>
 		</header>
@@ -181,7 +179,7 @@
           			<li><a href="#">guides</a></li>
           			<li><a href="#">community</a></li>
          			<li><a href="#">resources</a></li>
-         			<li><a class="contact">contact us</a></li>
+         			<li><a  href="#modal" class="contact" >contact us</a></li>
 				</ul>
 				<ul class="footer_icon">
           			<li><a href=""><img src="img/facebook.png" alt="Facebook"></a></li>
@@ -193,7 +191,25 @@
 				<p class="signature">
 					Copyright © 2017 TestPage. All rights reserved.
 				</p>
-		</footer>
-	</section>
+		</footer>	
+  	</section>
+  	<div id="modal" class="modal_Dialog">
+			<div class="modals_dialog">
+				<a href="#close" title="Закрыть" class="modal-close">&#10005</a>
+		        <div class="content_img">
+		        	<img src="img/Contact.png" alt="">
+		        </div>
+     		 	<div class="contact_content">
+       		 		<h2>Contact US</h2>
+       		 		<form name="form_contact">
+	         			<input type="text" class="imp" name="name" placeholder="Full name">
+	          			<input type="text" class="imp" name="phone" placeholder="Phone">
+	          			<input type="email" class="imp" name="email" placeholder="Email">
+	          			<textarea name="message" class="imp" placeholder="Message"></textarea>
+	          			<button id="submit" class="sbm">Send</button>
+	       			</form>
+				</div>
+			</div>
+		</div>
 </body>
 </html>

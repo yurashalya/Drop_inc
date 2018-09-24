@@ -1,0 +1,181 @@
+@import "source/variables";
+
+.modal_Dialog {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.modals_dialog {
+   	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: 100%;
+    width: 772px;
+    height: 515px;
+    box-shadow: 0 0 8px 1px rgba(17, 20, 48, 0.11);
+    background-color: $white;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    position: relative;
+
+    & .content_img img {
+    	width: 50%;
+       	margin-top: -160px;
+       	margin-right: 385px;
+    }
+}
+
+.contact_content {
+ 		position:absolute;
+ 		left: 420px;
+
+        & h2 {
+        	color: #0f0f0f;
+        	font-family: "Work Sans";
+        	font-size: 24px;
+        	letter-spacing: -0.20px;
+        	font-weight: $medium;
+        	line-height: 24px;
+        	margin: 2% 0;
+        }
+
+        & form {
+        	display: flex;
+        	flex-direction: column;
+        }
+
+        & .imp {
+        	margin: 12px 0;
+        	padding: 8px 5px;
+        	border: none;
+        	border-bottom: 1px solid $gray4;
+        }
+
+        & form textarea {
+	       	width: 260px;
+	        border-top: none;
+	        border-left: none;
+	        border-right: none;
+	        border-bottom: 1px solid $gray4;
+	        margin: 20px;
+	        padding: 10px 0;
+	        outline: none;
+        }
+
+        & form input[placeholder], form textarea[placeholder] {
+        	font-family: "Work Sans";
+          	color: $gray3;
+          	font-size: 14px;
+          	font-weight: $regular;
+          	line-height: 24px;
+        }
+
+        & form button {
+          	width: 143px;
+          	height: 44px;
+          	border-radius: 20px;
+          	font-weight: $regular;
+          	line-height: 24px;
+          	margin-top: 20px;
+ 		  	margin-left: 80px;
+          	background-color: $yellow;
+          	border: 1px solid $yellow;
+          	color: $gray3;
+          	font-family: "Work Sans";
+          	font-size: 14px;
+      }
+
+      	& form button:hover {
+            cursor: pointer;
+        }
+}
+
+
+.modal_Dialog:target {
+	display: block;
+}
+
+.modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 22px;
+	color: transparentize($light-black,0.6);
+	transition: color 200ms,
+			transform 500ms;
+				
+	&:hover,
+	&:focus {
+	color: $light-black;
+		transform: rotate(360deg);
+	}
+}
+
+
+@media only screen and (max-width: 900px) {
+	.content_img {
+		display: none !important;
+	}
+
+	.modal_Dialog {
+		justify-content: center !important;
+		width: 100% !important;
+		display: block !important;
+	}
+	
+	.contact_content {
+		left: 250px !important;
+	}
+
+  .modal_Dialog:target {
+      display: block !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+	.modals_dialog {
+		width: 500px;
+	}
+
+	.contact_content {
+		left: 100px !important;
+	}
+}
+
+@media only screen and (max-width: 535px) {
+	.modals_dialog {
+		width: 400px;
+	}
+
+	.contact_content {
+		left: 50px !important;
+	}
+}
+
+@media only screen and (max-width: 435px) {
+	.modals_dialog {
+		width: 300px;
+	}
+	.contact_content {
+		left: 50px !important;
+	}
+
+	.imp {
+		width: 200px !important;
+	}
+	
+	.sbm {
+		margin-left: 35px !important;
+	}
+
+}
