@@ -26,6 +26,11 @@
 		font-size: 14px;
 		color: $gray6;
 		font-weight: $regular;
+		transition: color .3s;
+    }
+
+    & .footer_nav li a:hover {
+    	color: $yellow;
     }
 
     & .footer_icon {

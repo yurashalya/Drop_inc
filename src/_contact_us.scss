@@ -11,7 +11,6 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-
 }
 
 .modals_dialog {
@@ -20,19 +19,33 @@
     align-items: center;
     background-size: 100%;
     width: 772px;
-    height: 515px;
+    height: 512px;
     box-shadow: 0 0 8px 1px rgba(17, 20, 48, 0.11);
     background-color: $white;
     text-align: center;
     margin: auto;
     padding: 0;
     position: relative;
+    animation-name: contact_amine;
+    animation-duration: 0.5s;
 
     & .content_img img {
     	width: 50%;
-       	margin-top: -160px;
+       	margin-top: -159px;
        	margin-right: 385px;
     }
+}
+
+
+@keyframes contact_amine {
+  from {
+    top: -340px;
+    opacity: 0; 
+  }
+  to {
+    top: 0;
+    opacity: 1; 
+  } 
 }
 
 .contact_content {
@@ -59,6 +72,8 @@
         	padding: 8px 5px;
         	border: none;
         	border-bottom: 1px solid $gray4;
+          outline: none;
+          z-index: 999999;
         }
 
         & form textarea {
@@ -74,10 +89,10 @@
 
         & form input[placeholder], form textarea[placeholder] {
         	font-family: "Work Sans";
-          	color: $gray3;
-          	font-size: 14px;
-          	font-weight: $regular;
-          	line-height: 24px;
+          color: $gray3;
+          font-size: 14px;
+          font-weight: $regular;
+          line-height: 24px;
         }
 
         & form button {
@@ -100,12 +115,7 @@
         }
 }
 
-
-.modal_Dialog:target {
-	display: block;
-}
-
-.modal-close {
+.modal_close {
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -122,6 +132,8 @@
 }
 
 
+
+
 @media only screen and (max-width: 900px) {
 	.content_img {
 		display: none !important;
@@ -130,16 +142,13 @@
 	.modal_Dialog {
 		justify-content: center !important;
 		width: 100% !important;
-		display: block !important;
+		display: none !important;;
 	}
 	
 	.contact_content {
 		left: 250px !important;
 	}
 
-  .modal_Dialog:target {
-      display: block !important;
-  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -179,3 +188,4 @@
 	}
 
 }
+

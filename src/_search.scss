@@ -1,0 +1,88 @@
+@import "source/variables";
+
+ .searches {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.content-search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 475px;
+    box-shadow: 0 0 8px 1px rgba(17, 20, 48, 0.14);
+    background-color: $white;
+    text-align: center;
+    top: 0;
+    margin: auto;
+    padding: 0;
+    background-size: 100%;
+    animation-name: anime_search;
+    animation-duration: 1s; 
+  }
+
+@keyframes anime_search {
+  from {
+    top: -340px;
+    opacity: 0; 
+  }
+  to {
+    top: 0;
+    opacity: 1; 
+  } 
+}
+
+.form_search  {
+	display: flex;
+	justify-content: center !important;
+	width: 100% !important;
+
+	& label  {
+		vertical-align: center;
+		padding-top: 25px;
+	}
+
+	& input {
+		width: 80%;
+		border: none;
+        border-bottom: 1px solid $gray4;
+		margin-left: 20px;
+		padding: 10px 0;
+		padding-left: 10px;
+		vertical-align: center;
+		outline: none;
+
+	}
+	 &  input[placeholder] {
+        	font-family: "Work Sans";
+          	color: $gray3;
+          	font-size: 14px;
+          	font-weight: $regular;
+          	line-height: 24px;
+        }
+}
+
+   
+.search_close {
+	position: absolute;
+	top: 120px;
+	right: 20px;
+	font-size: 22px;
+	color: transparentize($light-black,0.6);
+	transition: color 200ms,
+			transform 500ms;
+				
+	&:hover,
+	&:focus {
+	color: $light-black;
+		transform: rotate(360deg);
+	}
+}

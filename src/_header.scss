@@ -23,6 +23,10 @@ nav {
 	display: flex;
     justify-content: space-between;
     width: 90%;
+
+    & .footer_icon li a img {
+    	width: 40px;
+    }
 }
 
 .header_nav {
@@ -38,6 +42,7 @@ nav {
 	color: $gray1;
 	line-height: 23px;
 	transition: background-color 0.3s;
+	transition: color .3s;
 }
 
 .head_link:hover {
